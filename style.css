@@ -92,11 +92,7 @@
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-.imgset1 img:hover,
-.imgset2 img:hover,
-.imgset3 img:hover,
-.imgset4 img:hover,
-.imgset5 img:hover {
+.imgset1 img:hover {
     opacity: 0.8;
     transform: scale(1.1);
     animation: zoomInAnimation 1s ease-in-out;
@@ -118,6 +114,20 @@
         opacity: 1;
     }
 }
+.imgset2 img:hover{
+    animation-name: slideOutRight;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+}
+@keyframes slideOutRight {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(100%);
+    }
+  }
+  
 
 .foot {
     opacity: 0.5;
@@ -173,3 +183,58 @@ footer a:hover {
 .social-icons a:hover {
     color: #00bcd4;
 }
+.imgset3 img:hover{
+    animation-name: bounce;
+    animation-duration: 1s;
+  animation-timing-function: ease-in;
+}
+@keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+  
+.imgset4 img:hover{
+    animation-name: wave;
+    animation-duration: 1s;
+  animation-timing-function: ease-in;
+}
+  
+@keyframes wave {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(20px); }
+    100% { transform: translateX(0); }
+  }
+  
+  .wave {
+    animation: wave 1s ease-in-out infinite;
+  }
+
+  .imgset5 img:hover{
+    animation-name: pulse;
+    animation-duration: 1s;
+  animation-timing-function: ease-in;
+}
+  
+
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .pulse {
+    animation: pulse 2s infinite;
+  }
+  
+  
+  
